@@ -1,0 +1,10 @@
+D:\Work\四代平台\DataMaker\Sqlite\bin\Debug\Sqlite.dll
+D:\Work\四代平台\DataMaker\Sqlite\bin\Debug\Sqlite.pdb
+D:\Work\四代平台\DataMaker\Sqlite\obj\Debug\Sqlite.csprojResolveAssemblyReference.cache
+D:\Work\四代平台\DataMaker\Sqlite\obj\Debug\Sqlite.dll
+D:\Work\四代平台\DataMaker\Sqlite\obj\Debug\Sqlite.pdb
+D:\VSProjects\DataMaker\Sqlite\bin\Debug\Sqlite.dll
+D:\VSProjects\DataMaker\Sqlite\bin\Debug\Sqlite.pdb
+D:\VSProjects\DataMaker\Sqlite\obj\Debug\Sqlite.dll
+D:\VSProjects\DataMaker\Sqlite\obj\Debug\Sqlite.pdb
+D:\VSProjects\DataMaker\Sqlite\obj\Debug\Sqlite.csprojResolveAssemblyReference.cache

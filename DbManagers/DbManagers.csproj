@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D95812A-458B-49C2-8BD6-E336FA7337D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DbManagers</RootNamespace>
+    <AssemblyName>DbManagers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\寻呼话筒\UISource\第三方库文件\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.92.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Release\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedSetupManager.cs" />
+    <Compile Include="CascadingManager.cs" />
+    <Compile Include="DbManagerBase.cs" />
+    <Compile Include="GroupManager.cs" />
+    <Compile Include="Helpers\CustomMySqlHelper.cs" />
+    <Compile Include="DeviceManager.cs" />
+    <Compile Include="ExtensionManager.cs" />
+    <Compile Include="GeoPointManager.cs" />
+    <Compile Include="JurisdictionManager.cs" />
+    <Compile Include="RecordManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\SQLiteHelper.cs" />
+    <Compile Include="Models\SqlTextModel.cs" />
+    <Compile Include="SpecialManager.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="TestManager.cs" />
+    <Compile Include="TransferTableManager.cs" />
+    <Compile Include="UserManager.cs" />
+    <Compile Include="VideoLinkageManager.cs" />
+    <Compile Include="VoiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonHelperLib\CommonHelperLib.csproj">
+      <Project>{C1D8A6E8-4D99-4B59-9766-590380976B7E}</Project>
+      <Name>CommonHelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GoogleMapManagers\GoogleMapManagers.csproj">
+      <Project>{5F353E82-BF75-45AA-9274-F2BBEDDDCF75}</Project>
+      <Name>GoogleMapManagers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPPhoneModel\IPPhoneModel.csproj">
+      <Project>{615071DC-34BE-4F8B-8FF9-7A621047974C}</Project>
+      <Name>IPPhoneModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

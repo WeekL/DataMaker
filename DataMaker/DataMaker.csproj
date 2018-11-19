@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DC05357-C949-47D1-B295-1E3C569A50A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataMaker</RootNamespace>
+    <AssemblyName>DataMaker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>D:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C77B45A27ECDB88EDDF4F4424E08213403DEFE00</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DataMaker_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetReplayUtils, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DotNetReplayUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddACSDevFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddACSDevFm.Designer.cs">
+      <DependentUpon>AddACSDevFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAlmDevFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAlmDevFm.Designer.cs">
+      <DependentUpon>AddAlmDevFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bean\AccessDevice.cs" />
+    <Compile Include="bean\AlarmDevice.cs" />
+    <Compile Include="bean\base\Device.cs" />
+    <Compile Include="bean\base\DeviceBase.cs" />
+    <Compile Include="bean\base\Table.cs" />
+    <Compile Include="bean\InsightDevice.cs" />
+    <Compile Include="bean\IPCallDevice.cs" />
+    <Compile Include="bean\VideoDevice.cs" />
+    <Compile Include="AddIASDevFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIASDevFm.Designer.cs">
+      <DependentUpon>AddIASDevFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIpDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIpDev.Designer.cs">
+      <DependentUpon>AddIpDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIpmic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIpmic.Designer.cs">
+      <DependentUpon>AddIpmic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPersonnel.Designer.cs">
+      <DependentUpon>AddPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddVideoDevFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVideoDevFm.Designer.cs">
+      <DependentUpon>AddVideoDevFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bean\base\Asset.cs" />
+    <Compile Include="bean\base\Organization.cs" />
+    <Compile Include="CascadeFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CascadeFm.Designer.cs">
+      <DependentUpon>CascadeFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cfg_devtype.cs" />
+    <Compile Include="DataMakerFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataMakerFm.Designer.cs">
+      <DependentUpon>DataMakerFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrgFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrgFm.Designer.cs">
+      <DependentUpon>AddOrgFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventFm.Designer.cs">
+      <DependentUpon>EventFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event_DetailLinkPolicy.cs" />
+    <Compile Include="Event_DetailPolicySecLink.cs" />
+    <Compile Include="Event_SourceDevice.cs" />
+    <Compile Include="iot_storageFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iot_storageFm.Designer.cs">
+      <DependentUpon>iot_storageFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMysqlFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMysqlFm.Designer.cs">
+      <DependentUpon>LoginMysqlFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelConvertHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmartPowerFm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartPowerFm.Designer.cs">
+      <DependentUpon>SmartPowerFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="util\AddDeviceHelper.cs" />
+    <Compile Include="util\QuickLoadAcs.cs" />
+    <Compile Include="util\QuickLoadUtil.cs" />
+    <Compile Include="util\StringUtil.cs" />
+    <EmbeddedResource Include="AddACSDevFm.resx">
+      <DependentUpon>AddACSDevFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAlmDevFm.resx">
+      <DependentUpon>AddAlmDevFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIASDevFm.resx">
+      <DependentUpon>AddIASDevFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIpDev.resx">
+      <DependentUpon>AddIpDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIpmic.resx">
+      <DependentUpon>AddIpmic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPersonnel.resx">
+      <DependentUpon>AddPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVideoDevFm.resx">
+      <DependentUpon>AddVideoDevFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CascadeFm.resx">
+      <DependentUpon>CascadeFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataMakerFm.resx">
+      <DependentUpon>DataMakerFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrgFm.resx">
+      <DependentUpon>AddOrgFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventFm.resx">
+      <DependentUpon>EventFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iot_storageFm.resx">
+      <DependentUpon>iot_storageFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMysqlFm.resx">
+      <DependentUpon>LoginMysqlFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SmartPowerFm.resx">
+      <DependentUpon>SmartPowerFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataMaker_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IPAddress\IPAddressControlLib.csproj">
+      <Project>{2463CBF1-A5FC-406A-AF4D-89D96E66A8D7}</Project>
+      <Name>IPAddressControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mysql\Mysql.csproj">
+      <Project>{bff6ff88-e1b9-42fb-885b-f781782f22fc}</Project>
+      <Name>Mysql</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

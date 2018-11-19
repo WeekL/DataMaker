@@ -1,0 +1,15 @@
+E:\VS2013\DataMaker\Mysql\bin\Debug\Mysql.dll
+E:\VS2013\DataMaker\Mysql\bin\Debug\Mysql.pdb
+E:\VS2013\DataMaker\Mysql\obj\Debug\Mysql.csprojResolveAssemblyReference.cache
+E:\VS2013\DataMaker\Mysql\obj\Debug\Mysql.dll
+E:\VS2013\DataMaker\Mysql\obj\Debug\Mysql.pdb
+D:\Work\四代平台\DataMaker\Mysql\bin\Debug\Mysql.dll
+D:\Work\四代平台\DataMaker\Mysql\bin\Debug\Mysql.pdb
+D:\Work\四代平台\DataMaker\Mysql\obj\Debug\Mysql.csprojResolveAssemblyReference.cache
+D:\Work\四代平台\DataMaker\Mysql\obj\Debug\Mysql.dll
+D:\Work\四代平台\DataMaker\Mysql\obj\Debug\Mysql.pdb
+D:\VSProjects\DataMaker\Mysql\bin\Debug\Mysql.dll
+D:\VSProjects\DataMaker\Mysql\bin\Debug\Mysql.pdb
+D:\VSProjects\DataMaker\Mysql\obj\Debug\Mysql.dll
+D:\VSProjects\DataMaker\Mysql\obj\Debug\Mysql.pdb
+D:\VSProjects\DataMaker\Mysql\obj\Debug\Mysql.csprojResolveAssemblyReference.cache

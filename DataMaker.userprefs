@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="DataMaker/DataMaker.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataMaker/LoginMysqlFm.cs">
+    <Files>
+      <File FileName="DataMaker/LoginMysqlFm.cs" Line="1" Column="1" />
+      <File FileName="Mysql/MySqlDbHelper.cs" Line="1" Column="1" />
+      <File FileName="Mysql/DBHelper.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

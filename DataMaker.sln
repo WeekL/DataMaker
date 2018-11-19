@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMaker", "DataMaker\DataMaker.csproj", "{7DC05357-C949-47D1-B295-1E3C569A50A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mysql", "Mysql\Mysql.csproj", "{BFF6FF88-E1B9-42FB-885B-F781782F22FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sqlite", "Sqlite\Sqlite.csproj", "{A29D20CE-852C-4F68-B790-D098F5547396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis", "Redis\Redis.csproj", "{B2C7CC37-1BEE-4CFA-963B-88B506937855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPAddressControlLib", "IPAddress\IPAddressControlLib.csproj", "{2463CBF1-A5FC-406A-AF4D-89D96E66A8D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DC05357-C949-47D1-B295-1E3C569A50A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC05357-C949-47D1-B295-1E3C569A50A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC05357-C949-47D1-B295-1E3C569A50A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC05357-C949-47D1-B295-1E3C569A50A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF6FF88-E1B9-42FB-885B-F781782F22FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF6FF88-E1B9-42FB-885B-F781782F22FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF6FF88-E1B9-42FB-885B-F781782F22FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF6FF88-E1B9-42FB-885B-F781782F22FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29D20CE-852C-4F68-B790-D098F5547396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29D20CE-852C-4F68-B790-D098F5547396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29D20CE-852C-4F68-B790-D098F5547396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29D20CE-852C-4F68-B790-D098F5547396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C7CC37-1BEE-4CFA-963B-88B506937855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C7CC37-1BEE-4CFA-963B-88B506937855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C7CC37-1BEE-4CFA-963B-88B506937855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C7CC37-1BEE-4CFA-963B-88B506937855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2463CBF1-A5FC-406A-AF4D-89D96E66A8D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2463CBF1-A5FC-406A-AF4D-89D96E66A8D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2463CBF1-A5FC-406A-AF4D-89D96E66A8D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2463CBF1-A5FC-406A-AF4D-89D96E66A8D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

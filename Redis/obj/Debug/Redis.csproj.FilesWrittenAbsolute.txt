@@ -1,0 +1,1 @@
+/home/week/Documents/性能测试/四代平台/DataMaker/Redis/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs

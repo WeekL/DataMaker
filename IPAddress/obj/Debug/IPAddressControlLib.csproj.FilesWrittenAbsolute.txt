@@ -1,0 +1,5 @@
+/home/week/Documents/性能测试/四代平台/DataMaker/IPAddress/obj/Debug/IPAddressControlLib.Properties.Resources.resources
+/home/week/Documents/性能测试/四代平台/DataMaker/IPAddress/bin/Debug/IPAddressControlLib.pdb
+/home/week/Documents/性能测试/四代平台/DataMaker/IPAddress/bin/Debug/IPAddressControlLib.dll
+/home/week/Documents/性能测试/四代平台/DataMaker/IPAddress/obj/Debug/IPAddressControlLib.dll
+/home/week/Documents/性能测试/四代平台/DataMaker/IPAddress/obj/Debug/IPAddressControlLib.pdb

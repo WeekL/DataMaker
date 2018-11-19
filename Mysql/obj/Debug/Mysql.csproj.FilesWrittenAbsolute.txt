@@ -1,0 +1,4 @@
+/home/week/Documents/性能测试/四代平台/DataMaker/Mysql/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/week/Documents/性能测试/四代平台/DataMaker/Mysql/obj/Debug/Mysql.dll
+/home/week/Documents/性能测试/四代平台/DataMaker/Mysql/obj/Debug/Mysql.pdb
+/home/week/Documents/性能测试/四代平台/DataMaker/Mysql/bin/Debug/MySql.Data.dll
