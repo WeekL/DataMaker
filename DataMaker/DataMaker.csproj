@@ -181,6 +181,7 @@
       <DependentUpon>SmartPowerFm.cs</DependentUpon>
     </Compile>
     <Compile Include="util\AddDeviceHelper.cs" />
+    <Compile Include="util\ListHelper.cs" />
     <Compile Include="util\QuickLoadAcs.cs" />
     <Compile Include="util\QuickLoadUtil.cs" />
     <Compile Include="util\StringUtil.cs" />

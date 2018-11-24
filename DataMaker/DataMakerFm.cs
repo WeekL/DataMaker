@@ -397,28 +397,28 @@ namespace DataMaker
 
         private void 删除报警主机ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '511'";
-            _Mysql.ExcuteNoneQuery(mysql);
+            //string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '511'";
+            //_Mysql.ExcuteNoneQuery(mysql);
         }
 
         private void 删除视频主机ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '131'";
-            _Mysql.ExcuteNoneQuery(mysql);
-            mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '111'";
-            _Mysql.ExcuteNoneQuery(mysql);
+            //string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '131'";
+            //_Mysql.ExcuteNoneQuery(mysql);
+            //mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '111'";
+            //_Mysql.ExcuteNoneQuery(mysql);
         }
 
         private void 删除ATM预警主机ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '531'";
-            _Mysql.ExcuteNoneQuery(mysql);
+            //string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '531'";
+            //_Mysql.ExcuteNoneQuery(mysql);
         }
 
         private void 删除门禁控制器ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '581'";
-            _Mysql.ExcuteNoneQuery(mysql);
+            //string mysql = "DELETE FROM sys_devicebase WHERE OrgID = '" + _NodeTag + "' and DeviceType = '581'";
+            //_Mysql.ExcuteNoneQuery(mysql);
         }
 
         private void EventConfigtoolStripButton_Click(object sender, EventArgs e)

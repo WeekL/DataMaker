@@ -7,3 +7,4 @@ D:\VSProjects\DataMaker\Redis\bin\Debug\Redis.dll
 D:\VSProjects\DataMaker\Redis\bin\Debug\Redis.pdb
 D:\VSProjects\DataMaker\Redis\obj\Debug\Redis.dll
 D:\VSProjects\DataMaker\Redis\obj\Debug\Redis.pdb
+D:\VSProjects\DataMaker\Redis\obj\Debug\Redis.csprojResolveAssemblyReference.cache

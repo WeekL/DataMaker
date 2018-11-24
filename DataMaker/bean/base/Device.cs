@@ -11,6 +11,7 @@ namespace DataMaker.bean
     {
         public DeviceBase deviceBase;
 
+        //子设备列表，外层List为种类，内层为具体设备
         protected List<List<Device>> childList;
 
         public Device(string tableName)
@@ -62,6 +63,7 @@ namespace DataMaker.bean
             return buildSQLHead();
         }
 
+        //已弃用的执行方法
         public virtual new void excute(MySQLDBHelper db)
         {
             deviceBase.excute(db);

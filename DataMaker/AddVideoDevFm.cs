@@ -31,19 +31,23 @@ namespace DataMaker
         //添加视频主机
         private void AddVideoDevbutton_Click(object sender, EventArgs e)
         {
+            //禁用线程检查
             Control.CheckForIllegalCrossThreadCalls = false;
             ThreadStart start = new ThreadStart(doWork);
             Thread thread = new Thread(start);
+            thread.IsBackground = true;
             thread.Start();
         }
 
         private void doWork()
         {
             int dataCount = Int32.Parse(AddDevNumtextBox.Text);//数据生成数量
+            //设置进度条
             this.Invoke((EventHandler)delegate { this.AddDevprogressBar.Minimum = 0; });
             this.Invoke((EventHandler)delegate { this.AddDevprogressBar.Step = 1; });
             this.Invoke((EventHandler)delegate { this.AddDevprogressBar.Maximum = dataCount; });
             //AddDevprogressBar.Maximum = dataCount;
+
             string name = "视频主机";//资产名称的前缀
             string deviceCode = StringUtil.getDateTimeNum();//资产编码和设备唯一标识码的前缀
 
@@ -52,9 +56,10 @@ namespace DataMaker
             int IPCount = Int32.Parse(sArray[3]);//ip尾号
             int channelCount = Int32.Parse(AddChanneltextBox.Text);//通道数量
 
-            for (int i = 1; i <= dataCount;)
+            for (int i = 0; i < dataCount;)
             {
                 int left = dataCount - i;
+                //控制一次insert新增的数据量
                 int count = left > AddDeviceHelper.ONCE_INSERT ? AddDeviceHelper.ONCE_INSERT : left;
                 List<Device> devices = new List<Device>();
                 for (int j = 0; j < count; j++,i++)
@@ -68,11 +73,17 @@ namespace DataMaker
                     devices.Add(video);
 
                     this.Invoke((EventHandler)delegate { this.AddDevprogressBar.Value += AddDevprogressBar.Step; });
+                    //AddDevprogressBar.Value += AddDevprogressBar.Step;//让进度条增加一次
                 }
-                AddDeviceHelper.multiExcute(LoginMysqlFm.getNewDbHelper(), devices);
-                //AddDevprogressBar.Value += AddDevprogressBar.Step;//让进度条增加一次
+                AddDeviceHelper.multiExcute(LoginMysqlFm.getNewDbHelper(), devices);//执行数据新增操作
             }
             MessageBox.Show("添加成功");
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            System.Environment.Exit(0);
+            base.OnFormClosing(e);
         }
     }
 }

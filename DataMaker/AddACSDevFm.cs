@@ -42,6 +42,7 @@ namespace DataMaker
             Control.CheckForIllegalCrossThreadCalls = false;
             ThreadStart start = new ThreadStart(doWork);
             Thread thread = new Thread(start);
+            thread.IsBackground = true;
             thread.Start();
         }
 
@@ -54,14 +55,12 @@ namespace DataMaker
             int Port = Int32.Parse(PorttextBox.Text);
             int IPCount = Int32.Parse(sArray[3]);//ip尾号
             long IOTCtrlid = Int64.Parse(AddACSDevUIDtextBox.Text);
-            string ctlId = StringToHexString(IOTCtrlid.ToString(), Encoding.UTF8);
-            int PortCount = Int32.Parse(PorttextBox.Text);
 
             AddACSDevprogressBar.Maximum = dataCount;
             AddACSDevprogressBar.Value = 0;
             AddACSDevprogressBar.Step = 1;
 
-            for (int i = 1; i <= dataCount;)
+            for (int i = 0; i < dataCount;)
             {
                 int left = dataCount - i;
                 int count = left > AddDeviceHelper.ONCE_INSERT ? AddDeviceHelper.ONCE_INSERT : left;
@@ -69,22 +68,26 @@ namespace DataMaker
                 for (int j = 0; j < count; j++,i++)
                 {
                     AccessDevice acs = new AccessDevice();
-                    acs.setIp(string.Format("{0}.{1}.{2}.{3}", sArray[0], sArray[1], sArray[2], IPCount));
+                    acs.setIp(string.Format("{0}.{1}.{2}.{3}", sArray[0], sArray[1], sArray[2], IPCount++));
                     acs.setPort(Port.ToString());
                     acs.setDeviceCode(deviceCode + i.ToString());
-                    acs.setCtlId(ctlId);
+                    acs.setCtlId(StringToHexString(IOTCtrlid++.ToString(), Encoding.UTF8));
                     acs.setDeviceName(name + i.ToString());
                     acs.setDoorCount(4);//4扇门
+
                     devices.Add(acs);
 
-                    PortCount++;
-                    IOTCtrlid++;
-                    //IPCount++;
                     AddACSDevprogressBar.Value += AddACSDevprogressBar.Step;//让进度条增加一次
                 }
                 AddDeviceHelper.multiExcute(LoginMysqlFm.getNewDbHelper(), devices);
             }
             MessageBox.Show("添加成功");
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            System.Environment.Exit(0);
+            base.OnFormClosing(e);
         }
     }
 }

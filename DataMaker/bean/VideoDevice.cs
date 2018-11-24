@@ -14,8 +14,6 @@ namespace DataMaker.bean
         public VideoDevice()
             : base("video_DeviceBase")
         {
-            //sHead = "devType,UserName,Pwd";
-            //sValue = "'3','admin','1'";
             setParam("devType", "3");
             setUserName("admin");
             setPwd("1");
@@ -55,8 +53,6 @@ namespace DataMaker.bean
         public Channel() 
             : base("video_Channel")
         {
-            //sHead = "DevType,UserName,Pwd,DevIP,DevPort,DevNum";
-            //sValue = "'0','admin','1','192.168.0.0','8000','1'";
             setUserName("admin");
             setPwd("1");
             setIp("192.168.0.0");

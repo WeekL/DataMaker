@@ -131,7 +131,12 @@ namespace Mysql
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                string exceptionInfo = "";
+                exceptionInfo = "异常对象：" + e.Source
+                    + "\n 异常信息：" + e.Message
+                    + "\n 异常方法：" + e.TargetSite
+                    + "\n 异常堆栈：" + e.StackTrace;
+                Console.WriteLine(exceptionInfo);
             }
             return amount;
         }

@@ -32,21 +32,6 @@ namespace DataMaker.bean
             return head;
         }
 
-        public void setMicCount(int count)
-        {
-            List<Device> childs = new List<Device>();
-            for (int i = 0; i < count; i++)
-            {
-                CallMic mic = new CallMic();
-                mic.setFatherCode(getId());
-                mic.setDeviceCode("0" + this.deviceBase.getDeviceCode() + i.ToString());
-                mic.setDeviceName("对讲话筒" + i.ToString());
-                mic.setParam("ResourceID", resId);
-                childs.Add(mic);
-            }
-            childList.Add(childs);
-        }
-
         public void setPanelCount(int count)
         {
             List<Device> childs = new List<Device>();
@@ -78,8 +63,10 @@ namespace DataMaker.bean
         {
             //sHead = "CallDevBrand,AccessProtocol";
             //sValue = "'Brand_CALL_MC_HYG3','0'";
+            setPort("5060");
             setParam("CallDevBrand", "Brand_CALL_MC_HYG3");
             setParam("AccessProtocol", "0");
+            setParam("showOrder", "1");
             deviceBase.setDeviceMainType("550");
             deviceBase.setDeviceType("553");
         }

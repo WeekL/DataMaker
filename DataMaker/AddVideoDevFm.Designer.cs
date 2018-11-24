@@ -141,8 +141,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 190);
-            this.Controls.Add(this.StopTimetextBox);
-            this.Controls.Add(this.StartTimetextBox);
             this.Controls.Add(this.AddVideoDevcheckBox);
             this.Controls.Add(this.AddVideoDevbutton);
             this.Controls.Add(this.AddDevprogressBar);
@@ -158,7 +156,6 @@
             this.Text = "AddVideoDevFm";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -174,7 +171,5 @@
         private System.Windows.Forms.ProgressBar AddDevprogressBar;
         private System.Windows.Forms.Button AddVideoDevbutton;
         private System.Windows.Forms.CheckBox AddVideoDevcheckBox;
-        private System.Windows.Forms.TextBox StartTimetextBox;
-        private System.Windows.Forms.TextBox StopTimetextBox;
     }
 }

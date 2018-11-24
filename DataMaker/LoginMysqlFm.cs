@@ -45,8 +45,8 @@ namespace DataMaker
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
-                MessageBox.Show(ex.Message);
+                string info = StringUtil.buildExceptionInfo(ex);
+                MessageBox.Show(info);
             }
         }
 
@@ -64,7 +64,7 @@ namespace DataMaker
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(StringUtil.buildExceptionInfo(ex));
             }
             return null;
         }

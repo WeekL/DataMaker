@@ -32,6 +32,7 @@ namespace DataMaker
             Control.CheckForIllegalCrossThreadCalls = false;
             ThreadStart start = new ThreadStart(doWork);
             Thread thread = new Thread(start);
+            thread.IsBackground = true;
             thread.Start();
         }
 
@@ -66,6 +67,12 @@ namespace DataMaker
                 AddDeviceHelper.multiExcute(LoginMysqlFm.getNewDbHelper(), devices);
             }
             MessageBox.Show("添加成功");
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            System.Environment.Exit(0);
+            base.OnFormClosing(e);
         }
     }
 }

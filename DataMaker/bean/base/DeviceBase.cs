@@ -9,7 +9,7 @@ namespace DataMaker.bean
 {
     class DeviceBase : Table
     {
-
+        private static string head;
         private string deviceCode;
         private Organization org;
         public Asset asset;
@@ -18,9 +18,8 @@ namespace DataMaker.bean
         public DeviceBase()
             : base("sys_deviceBase")
         {
+            setParam("FatherCode", "");
             org = QuickLoadUtil.curOrg;
-            //sHead = "enable,OrgId";
-            //sValue = "'1','" + org.id + "'";
             setParam("enable", "1");
             setParam("OrgId", org.id);
             if (org.areaList.Count > 0)
@@ -48,7 +47,7 @@ namespace DataMaker.bean
 
         public void setFatherCode(string code)
         {
-            setParam("FatherCode", code);
+            sqlDictionary["FatherCode"] = code;
         }
 
         public void setName(string name)
@@ -69,7 +68,11 @@ namespace DataMaker.bean
 
         public override string initHead()
         {
-            return buildSQLHead();
+            if (head == null)
+            {
+                head = buildSQLHead();
+            }
+            return head;
         }
 
         public new void excute(MySQLDBHelper db)

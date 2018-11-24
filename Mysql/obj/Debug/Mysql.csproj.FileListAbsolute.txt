@@ -12,4 +12,3 @@ D:\VSProjects\DataMaker\Mysql\bin\Debug\Mysql.dll
 D:\VSProjects\DataMaker\Mysql\bin\Debug\Mysql.pdb
 D:\VSProjects\DataMaker\Mysql\obj\Debug\Mysql.dll
 D:\VSProjects\DataMaker\Mysql\obj\Debug\Mysql.pdb
-D:\VSProjects\DataMaker\Mysql\obj\Debug\Mysql.csprojResolveAssemblyReference.cache

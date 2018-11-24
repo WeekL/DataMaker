@@ -6,14 +6,15 @@ using System.Text;
 
 namespace DataMaker.bean
 {
+    /// <summary>
+    /// sql语句的底层封装，一个table对象等于一条mysql insert语句
+    /// </summary>
     abstract class Table
     {
-        private Dictionary<string, string> sqlDictionary;
-        private string tableName;
-        private string id;
-
-        //protected string sHead = "";
-        //protected string sValue = "";
+        //存储列名和对应值的字典，用于拼装sql语句
+        protected Dictionary<string, string> sqlDictionary;
+        private string tableName;//表名
+        private string id;//数据id
 
         public Table(string tableName)
         {
@@ -28,6 +29,11 @@ namespace DataMaker.bean
             return id;
         }
 
+        /// <summary>
+        /// 添加列名和值
+        /// </summary>
+        /// <param name="key">列名</param>
+        /// <param name="value">值</param>
         public void setParam(string key, string value)
         {
             sqlDictionary.Add(key, value);
@@ -36,6 +42,10 @@ namespace DataMaker.bean
         //初始化sqlHead，应等于各表的静态变量head
         public abstract string initHead();
 
+        /// <summary>
+        /// 拼装insert语句的头部
+        /// </summary>
+        /// <returns>"INSERT INTO TABLENAME(column1,column2,...) VALUES"</returns>
         public virtual string buildSQLHead()
         {
             StringBuilder builder = new StringBuilder("INSERT INTO " + tableName + "(");
@@ -49,6 +59,10 @@ namespace DataMaker.bean
             return builder.ToString();
         }
 
+        /// <summary>
+        /// 拼装insert语句的值
+        /// </summary>
+        /// <returns>"("value1","value2",...)"</returns>
         public string buildSQLValue()
         {
             StringBuilder builder = new StringBuilder("(");
@@ -73,6 +87,10 @@ namespace DataMaker.bean
             return result;
         }
 
+        /// <summary>
+        /// 拼装完成的insert语句，已弃用，由AddDeviceHelper类统一调度拼装
+        /// </summary>
+        /// <returns>"INSERT INTO TABLENAME(column1,column2,...) VALUES("value1","value2",...)"</returns>
         public string buildSqlStr()
         {
             //string sql = this.buildSQLHead() + buildSQLValue();
@@ -81,7 +99,10 @@ namespace DataMaker.bean
             return sql;
         }
 
-        //弃用，用AddDeviceHelper统一调度
+        /// <summary>
+        /// 执行insert操作，已弃用，由AddDeviceHelper统一调度执行
+        /// </summary>
+        /// <param name="db"></param>
         public virtual void excute(MySQLDBHelper db)
         {
             db.ExcuteNoneQuery(buildSqlStr());

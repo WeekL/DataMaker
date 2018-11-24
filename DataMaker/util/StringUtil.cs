@@ -82,5 +82,15 @@ namespace DataMaker
             s = s.Substring(0, s.Length - 1);
             return s;
         }
+
+        public static string buildExceptionInfo(Exception e)
+        {
+            string exceptionInfo = "";
+            exceptionInfo = "异常对象：" + e.Source
+                + "\n 异常信息：" + e.Message
+                + "\n 异常方法：" + e.TargetSite
+                + "\n 异常堆栈：" + e.StackTrace;
+            return exceptionInfo;
+        }
     }
 }

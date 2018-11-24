@@ -32,6 +32,7 @@ namespace DataMaker
             Control.CheckForIllegalCrossThreadCalls = false;
             ThreadStart start = new ThreadStart(doWork);
             Thread thread = new Thread(start);
+            thread.IsBackground = true;
             thread.Start();
         }
 
@@ -48,7 +49,7 @@ namespace DataMaker
             AddAlmDevprogressBar.Maximum = dataCount;
             AddAlmDevprogressBar.Step = 1;
 
-            for (int i = 1; i <= dataCount;)
+            for (int i = 0; i < dataCount;)
             {
                 int left = dataCount - i;
                 int count = left > AddDeviceHelper.ONCE_INSERT ? AddDeviceHelper.ONCE_INSERT : left;
@@ -69,6 +70,12 @@ namespace DataMaker
                 AddDeviceHelper.multiExcute(LoginMysqlFm.getNewDbHelper(), devices);
             }
             MessageBox.Show("添加成功");
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            System.Environment.Exit(0);
+            base.OnFormClosing(e);
         }
     }
 }

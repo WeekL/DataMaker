@@ -72,7 +72,7 @@
             // 
             // AddIpdevbutton
             // 
-            this.AddIpdevbutton.Location = new System.Drawing.Point(82, 126);
+            this.AddIpdevbutton.Location = new System.Drawing.Point(67, 121);
             this.AddIpdevbutton.Name = "AddIpdevbutton";
             this.AddIpdevbutton.Size = new System.Drawing.Size(75, 23);
             this.AddIpdevbutton.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // AddIpdevprogressBar
             // 
-            this.AddIpdevprogressBar.Location = new System.Drawing.Point(28, 97);
+            this.AddIpdevprogressBar.Location = new System.Drawing.Point(28, 92);
             this.AddIpdevprogressBar.Name = "AddIpdevprogressBar";
             this.AddIpdevprogressBar.Size = new System.Drawing.Size(166, 23);
             this.AddIpdevprogressBar.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 149);
+            this.ClientSize = new System.Drawing.Size(239, 171);
             this.Controls.Add(this.AddIpdevNotextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AddIpdevprogressBar);

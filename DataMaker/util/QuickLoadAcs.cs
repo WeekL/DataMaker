@@ -19,12 +19,13 @@ namespace DataMaker.util
         public static void attach(MySQLDBHelper db, string orgId)
         {
             QuickLoadUtil.attach(db, orgId);//预加载机构相关信息
-            acsCfgList = new List<string>();
             DataTable dt = db.GetDataTable("SELECT id from acs_doorfbsconfig");
-            foreach (string id in dt.Rows)
+            acsCfgList = new List<string>();
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                acsCfgList.Add(id);
+                acsCfgList.Add(dt.Rows[i]["id"].ToString());
             }
+            dt.Dispose();
         }
     }
 }

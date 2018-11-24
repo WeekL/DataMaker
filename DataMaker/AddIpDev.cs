@@ -33,6 +33,7 @@ namespace DataMaker
             Control.CheckForIllegalCrossThreadCalls = false;
             ThreadStart start = new ThreadStart(doWork);
             Thread thread = new Thread(start);
+            thread.IsBackground = true;
             thread.Start();
         }
 
@@ -50,7 +51,7 @@ namespace DataMaker
             int IPCount = Int32.Parse(sArray[3]);//ip尾号
             int IpNo = Int32.Parse(AddIpdevNotextBox.Text);
 
-            for (int i = 1; i <= dataCount;)
+            for (int i = 0; i < dataCount;)
             {
                 int left = dataCount - i;
                 int count = left > AddDeviceHelper.ONCE_INSERT ? AddDeviceHelper.ONCE_INSERT : left;
@@ -63,7 +64,6 @@ namespace DataMaker
                     call.setDeviceCode(deviceCode + i.ToString());
                     call.setDeviceName(name + i.ToString());
                     call.setResourceId(IpNo++.ToString());
-                    call.setMicCount(6);
                     call.setPanelCount(6);
                     devices.Add(call);
 
@@ -71,7 +71,13 @@ namespace DataMaker
                 }
                 AddDeviceHelper.multiExcute(LoginMysqlFm.getNewDbHelper(), devices);
             }
-            MessageBox.Show("添加成功");
+                MessageBox.Show("添加成功");
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            System.Environment.Exit(0);
+            base.OnFormClosing(e);
         }
     }
 }
